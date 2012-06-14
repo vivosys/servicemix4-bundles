@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache.servicemix.bundles</groupId>
         <artifactId>bundles-pom</artifactId>
-        <version>9-SNAPSHOT</version>
+        <version>6</version>
         <relativePath>../bundles-pom/pom.xml</relativePath>
     </parent>
 
@@ -44,9 +44,11 @@
         <servicemix.osgi.import.pkg>
             javax.swing*,
             javax.xml.parsers,
-            javax.xml.transform,
+            javax.xml.transform*,
+            javax.imageio*,
             org.apache.xml.utils,
             org.apache.xpath*,
+            com.sun.image.codec.jpeg;resolution:=optional,
             org.mozilla.javascript;resolution:=optional,
             org.w3c*;resolution:=optional,
             org.xml.sax*
