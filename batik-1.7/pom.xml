@@ -78,6 +78,12 @@
             <version>${pkgVersion}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>batik-codec</artifactId>
+            <version>${pkgVersion}</version>
+            <optional>true</optional>
+        </dependency>
 
         <!-- sources -->
         <!-- Not available on Central
@@ -130,6 +136,7 @@
                                     <include>${pkgGroupId}:batik-extension</include>
                                     <include>${pkgGroupId}:batik-svggen</include>
                                     <include>${pkgGroupId}:batik-transcoder</include>
+                                    <include>${pkgGroupId}:batik-codec</include>
                                 </includes>
                             </artifactSet>
                             <filters>
@@ -153,6 +160,12 @@
                                 </filter>
                                 <filter>
                                     <artifact>${pkgGroupId}:batik-transcoder</artifact>
+                                    <excludes>
+                                        <exclude>**</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>${pkgGroupId}:batik-codec</artifact>
                                     <excludes>
                                         <exclude>**</exclude>
                                     </excludes>
